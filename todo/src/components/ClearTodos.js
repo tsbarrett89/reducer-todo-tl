@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ClearTodos = () => {
+const ClearTodos = ({ dispatch }) => {
     return (
         <div>
-            
+            <button onClick={() => dispatch({ type: "CLEAR_COMPLETED" })}>Clear Completed Items</button>
         </div>
     )
 }
