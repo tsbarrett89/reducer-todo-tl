@@ -3,9 +3,14 @@ export const todoReducer = (state, action) => {
         case "ADD_ITEM":
             return [ ...state, action.payload ]
         case "TOGGLE_COMPLETED":
-            return [ ...state, action.payload.completed: true ]
+            return state.map(todo => {
+                if(todo.id === action.payload.id){
+                    return { ...todo, completed: true}
+                } else {
+                    return todo
+                }
+            })
         default:
             return state
     }
-    return state
 }
