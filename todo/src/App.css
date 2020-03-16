@@ -80,3 +80,11 @@ body {
   color: white;
   font-size: 1.8rem
 }
+
+.todo-container {
+  max-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
