@@ -27,7 +27,7 @@ const AddTodoForm = ({ dispatch }) => {
                     value={newTodo.item}
                     onChange={handleChange}
                 />
-                <button type='submit'>Add Item</button>
+                <button type='submit' className='add-button'>Add Item</button>
             </form>
         </div>
     )

@@ -59,7 +59,7 @@ body {
 }
 
 .todo-header {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
 }
 
@@ -69,4 +69,14 @@ body {
   outline: 0;
   border-bottom: 2px solid white;
   color: white;
+  font-size: 1.6rem;
+  text-align: center
+}
+
+.add-button {
+  background: none;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.8rem
 }
