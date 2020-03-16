@@ -12,18 +12,23 @@ const AddTodoForm = ({ dispatch }) => {
         setNewTodo({...newTodo, [e.target.name]: e.target.value})
     }
 
+    const handleSubmit = e => {
+        e.preventDefault()
+        dispatch({ type: 'ADD_ITEM', payload: newTodo})
+        setNewTodo(clearTodo)
+    }
+
     return (
         <div>
-            <input
-                name='item'
-                value={newTodo.item}
-                onChange={handleChange}
-            />
-            <button onClick={() => {
-                dispatch({ type: 'ADD_ITEM', payload: newTodo})
-                setNewTodo(clearTodo)
-            }}
-                >Add Item</button>
+            <form onSubmit={handleSubmit}>
+                <input
+                    className='add-input'
+                    name='item'
+                    value={newTodo.item}
+                    onChange={handleChange}
+                />
+                <button type='submit'>Add Item</button>
+            </form>
         </div>
     )
 }
