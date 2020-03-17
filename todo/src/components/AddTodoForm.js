@@ -19,7 +19,7 @@ const AddTodoForm = ({ dispatch }) => {
     }
 
     return (
-        <div>
+        <div className='add-form'>
             <form onSubmit={handleSubmit}>
                 <input
                     className='add-input'
